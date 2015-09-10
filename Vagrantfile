@@ -12,7 +12,7 @@ Vagrant.configure("2") do |config|
         aws.secret_access_key = MyConfig::AWS[:secret_access_key]
         aws.keypair_name = MyConfig::AWS[:keypair_name]
         aws.ami = MyConfig::AWS[:ami]
-        aws.instance_type = "m3.medium"
+        aws.instance_type = MyConfig::AWS[:instance_type]
         aws.region = MyConfig::AWS[:region]
         aws.security_groups = MyConfig::AWS[:security_groups]
         aws.tags = {
